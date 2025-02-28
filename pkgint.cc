@@ -57,7 +57,7 @@ int main() {
     std::string installer, updater;
 
     // Запрос выбора у пользователя
-    printf("Choose package manager (1-3):\n");
+    printf("Choose package manager (1-5):\n");
     printf("0. cancel\n");
     printf("1. apt-get\n");
     printf("2. pacman\n");
@@ -97,8 +97,8 @@ int main() {
     }
     char ch1 = '\0';
     
-    std::cout << "Installer: " << installer << "\n";
-    printf("Installing %d packages, are you sure? (y|n) - ", (int)pckgs.size());
+    std::cout << "Installer command: " << installer << "\n\n";
+    printf("Installing %d packages, are you sure? (y|n): ", (int)pckgs.size());
     std::cin >> ch1;
 
     if (ch1 != 'y') {
